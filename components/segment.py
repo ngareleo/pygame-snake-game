@@ -15,10 +15,11 @@ class segment:
         return pg.draw.rect(window, self.color, [relative_position[0], relative_position[1], PIXEL_SIZE[0],
                                                  PIXEL_SIZE[1]])
 
-    def pass_info(self):
+    def pass_info(self, debug=False):
         self.child.current_position = self.current_position
-        print(f"Me is {self}\tMother is {self.mother}\t Child is {self.child}")
-        print(f" me position is {self.current_position}\tChild position is {self.child.current_position}\n\n")
+        if debug:
+            print(f"Me is {self}\tMother is {self.mother}\t Child is {self.child}")
+            print(f" me position is {self.current_position}\tChild position is {self.child.current_position}\n\n")
 
 
 

@@ -2,8 +2,10 @@ from lib import *
 from components import *
 import pygame as pg
 from game import Game
+import os
 
 pg.init()
+os.environ["SDL_VIDEODRIVER"] = "dummy"
 
 def initialize_components():
     game_window = SnakeWindow(
